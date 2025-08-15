@@ -1,38 +1,31 @@
-import { useRef } from "react";
-import { useDrag } from "react-dnd";
-
 const Window = ({
     title,
     children,
-    initialPosition = { top: 50, left: 50 },
+    onClose,
+    handleRef,
+    attributes,
+    listeners,
 }) => {
-    const [{ isDragging }, drag] = useDrag(() => ({
-        type: "window",
-        item: { id: title },
-        collect: (monitor) => ({
-            isDragging: monitor.isDragging(),
-        }),
-    }));
-
-    const ref = useRef(null);
-    drag(ref);
-
-    const style = {
-        position: "absolute",
-        top: initialPosition.top,
-        left: initialPosition.left,
-        zIndex: isDragging ? 2 : 1, // Optional: bring to front when dragging
+    const handleCloseClick = (event) => {
+        event.stopPropagation();
+        onClose();
     };
 
     return (
-        <div
-            ref={ref}
-            className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1"
-            style={style}
-        >
-            <div className="flex justify-between items-center bg-blue-500 text-white px-2 py-1 cursor-move">
-                <span className="font-bold">{title}</span>
-                <button className="bg-red-500 hover:bg-red-600 text-white px-2 py-0.5 rounded-sm">
+        <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1">
+            <div className="flex justify-between items-center bg-blue-500 text-white px-2 py-1">
+                <span 
+                    ref={handleRef}
+                    className="font-bold cursor-move flex-1"
+                    {...listeners}
+                    {...attributes}
+                >
+                    {title}
+                </span>
+                <button
+                    className="bg-red-500 hover:bg-red-600 text-white px-2 py-0.5 rounded-sm"
+                    onClick={handleCloseClick}
+                >
                     X
                 </button>
             </div>
