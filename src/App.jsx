@@ -7,6 +7,7 @@ import AboutMe from "./components/AboutMe";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import { FaInfo, FaFolder, FaTools, FaMailBulk } from "react-icons/fa";
 
 function App() {
     const [windows, setWindows] = useState([]);
@@ -60,9 +61,9 @@ function App() {
                     hoverFillColor="#6b9080"
                 />
                 {/* Main "Desktop" Window */}
-                <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1 min-w-xl max-w-2xl relative z-10">
+                <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1 min-w-xl max-w-2xl relative z-10 rounded-lg drop-shadow-lg">
                     {/* Title bar */}
-                    <div className="flex justify-between items-center bg-[#6b9080] text-white px-2 py-1">
+                    <div className="flex justify-between items-center bg-[#6b9080] text-white px-2 py-1 rounded-t-md">
                         <span className="font-bold flex-1">Home</span>
                     </div>
                     {/* Window content */}
@@ -76,33 +77,37 @@ function App() {
                         </p>
                         <div className="space-x-4 flex justify-center">
                             <button
-                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md"
+                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md rounded-md"
                                 onClick={() =>
                                     openWindow("about-me", "About Me")
                                 }
                             >
+                                <FaInfo className="inline-block mr-2" />
                                 About
                             </button>
                             <button
-                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md"
+                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md rounded-md"
                                 onClick={() =>
                                     openWindow("experience", "Experience")
                                 }
                             >
+                                <FaTools className="inline-block mr-2" />
                                 Experience
                             </button>
                             <button
-                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md"
+                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md rounded-md"
                                 onClick={() =>
                                     openWindow("projects", "Projects")
                                 }
                             >
+                                <FaFolder className="inline-block mr-2" />
                                 Projects
                             </button>
                             <button
-                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md"
+                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md rounded-md"
                                 onClick={() => openWindow("contact", "Contact")}
                             >
+                                <FaMailBulk className="inline-block mr-2" />
                                 Contact
                             </button>
                         </div>
