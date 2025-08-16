@@ -3,6 +3,10 @@ import DraggableWindow from "./components/DraggableWindow";
 import { DndContext } from "@dnd-kit/core";
 import { restrictToWindowEdges } from "@dnd-kit/modifiers";
 import Squares from "./components/Squares";
+import AboutMe from "./components/AboutMe";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
     const [windows, setWindows] = useState([]);
@@ -82,6 +86,14 @@ function App() {
                             <button
                                 className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md"
                                 onClick={() =>
+                                    openWindow("experience", "Experience")
+                                }
+                            >
+                                Experience
+                            </button>
+                            <button
+                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md"
+                                onClick={() =>
                                     openWindow("projects", "Projects")
                                 }
                             >
@@ -106,17 +118,16 @@ function App() {
                         initialPosition={win.position}
                     >
                         {win.id === "about-me" && (
-                            <>
-                                <p>This is the About Me window content.</p>
-                                <p>This is the About Me window content.</p>
-                                <p>This is the About Me window content.</p>
-                            </>
+                            <AboutMe />
+                        )}
+                        {win.id === "experience" && (
+                            <Experience />
                         )}
                         {win.id === "projects" && (
-                            <p>This is the Projects window content.</p>
+                            <Projects />
                         )}
                         {win.id === "contact" && (
-                            <p>This is the Contact window content.</p>
+                            <Contact />
                         )}
                     </DraggableWindow>
                 ))}

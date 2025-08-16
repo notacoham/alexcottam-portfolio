@@ -13,8 +13,8 @@ const Window = ({
 
     return (
         <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1">
-            <div className="flex justify-between items-center bg-blue-500 text-white px-2 py-1">
-                <span 
+            <div className="flex justify-between items-center bg-[#6b9080] text-white px-2 py-1">
+                <span
                     ref={handleRef}
                     className="font-bold cursor-move flex-1"
                     {...listeners}
@@ -29,7 +29,7 @@ const Window = ({
                     X
                 </button>
             </div>
-            <div className="p-4 bg-white">{children}</div>
+            <div className="p-4 bg-[#f6fff8]">{children}</div>
         </div>
     );
 };
