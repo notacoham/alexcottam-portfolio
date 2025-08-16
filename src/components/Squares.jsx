@@ -62,19 +62,19 @@ const Squares = ({
         }
       }
 
-      const gradient = ctx.createRadialGradient(
-        canvas.offsetWidth / 2,
-        canvas.offsetHeight / 2,
-        0,
-        canvas.offsetWidth / 2,
-        canvas.offsetHeight / 2,
-        Math.sqrt(canvas.offsetWidth ** 2 + canvas.offsetHeight ** 2) / 2
-      );
-      gradient.addColorStop(0, "rgba(0, 0, 0, 0)");
-      gradient.addColorStop(1, "#060010");
+      // const gradient = ctx.createRadialGradient(
+      //   canvas.offsetWidth / 2,
+      //   canvas.offsetHeight / 2,
+      //   0,
+      //   canvas.offsetWidth / 2,
+      //   canvas.offsetHeight / 2,
+      //   Math.sqrt(canvas.offsetWidth ** 2 + canvas.offsetHeight ** 2) / 2
+      // );
+      // gradient.addColorStop(0, "rgba(0, 0, 0, 0)");
+      // gradient.addColorStop(1, "#060010");
 
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
+      // ctx.fillStyle = gradient;
+      // ctx.fillRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
     };
 
     const updateAnimation = () => {

@@ -46,44 +46,49 @@ function App() {
             onDragEnd={handleDragEnd}
             modifiers={[restrictToWindowEdges]}
         >
-            <div className="font-mozilla h-screen w-screen relative overflow-hidden flex items-center justify-center bg-cyan-950">
+            <div className="font-mozilla h-screen w-screen relative overflow-hidden flex items-center justify-center bg-[#A4C3B2]">
                 {/* Animated squares background */}
-                <Squares 
-                    speed={0.125}                    
-                    squareSize={100}                
-                    direction="diagonal"           
-                    borderColor="#271e37"             
-                    hoverFillColor="#222222"          
+                <Squares
+                    speed={0.125}
+                    squareSize={100}
+                    direction="diagonal"
+                    borderColor="#4F6C60"
+                    hoverFillColor="#6b9080"
                 />
                 {/* Main "Desktop" Window */}
-                <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1 max-w-lg relative z-10">
+                <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1 max-w-2xl relative z-10">
                     {/* Title bar */}
-                    <div className="flex justify-between items-center bg-blue-500 text-white px-2 py-1">
-                        <span className="font-bold flex-1">
-                            Welcome to My Portfolio
-                        </span>
+                    <div className="flex justify-between items-center bg-[#6b9080] text-white px-2 py-1">
+                        <span className="font-bold flex-1">Home</span>
                     </div>
                     {/* Window content */}
-                    <div className="p-4 bg-white">
-                        <h1 className="text-2xl font-bold mb-4">
-                            Welcome to My Portfolio
+                    <div className="p-4 bg-[#f6fff8]">
+                        <h1 className="text-2xl font-bold">
+                            Hi! I'm Alex Cottam 👋
                         </h1>
-                        <p className="mb-4">Click a button to open a new window.</p>
+                        <p className="text-sm">📍 Salt Lake City, UT</p>
+                        <p className="text-sm mb-4">
+                            🖥️ iOS and Frontend Developer
+                        </p>
                         <div className="space-x-4">
                             <button
-                                className="bg-gray-300 hover:bg-gray-400 p-2 border-2 border-solid border-gray-400 shadow-md"
-                                onClick={() => openWindow("about-me", "About Me")}
+                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md"
+                                onClick={() =>
+                                    openWindow("about-me", "About Me")
+                                }
                             >
-                                About Me
+                                About
                             </button>
                             <button
-                                className="bg-gray-300 hover:bg-gray-400 p-2 border-2 border-solid border-gray-400 shadow-md"
-                                onClick={() => openWindow("projects", "Projects")}
+                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md"
+                                onClick={() =>
+                                    openWindow("projects", "Projects")
+                                }
                             >
                                 Projects
                             </button>
                             <button
-                                className="bg-gray-300 hover:bg-gray-400 p-2 border-2 border-solid border-gray-400 shadow-md"
+                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md"
                                 onClick={() => openWindow("contact", "Contact")}
                             >
                                 Contact
@@ -101,7 +106,11 @@ function App() {
                         initialPosition={win.position}
                     >
                         {win.id === "about-me" && (
-                            <p>This is the About Me window content.</p>
+                            <>
+                                <p>This is the About Me window content.</p>
+                                <p>This is the About Me window content.</p>
+                                <p>This is the About Me window content.</p>
+                            </>
                         )}
                         {win.id === "projects" && (
                             <p>This is the Projects window content.</p>
