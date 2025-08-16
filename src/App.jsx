@@ -42,7 +42,7 @@ function App() {
             onDragEnd={handleDragEnd}
             modifiers={[restrictToWindowEdges]}
         >
-            <div className="h-screen w-screen relative overflow-hidden flex items-center justify-center bg-cyan-950">
+            <div className="font-mozilla h-screen w-screen relative overflow-hidden flex items-center justify-center bg-cyan-950">
                 {/* Animated squares background */}
                 <Squares 
                     speed={0.125}                    
