@@ -14,7 +14,7 @@ const DraggableWindow = ({ id, title, children, initialPosition, onClose }) => {
         position: "absolute",
         left: initialPosition.x,
         top: initialPosition.y,
-        zIndex: isDragging ? 10 : 1,
+        zIndex: isDragging ? 15 : 11,
         transform: transform
             ? `translate3d(${transform.x}px, ${transform.y}px, 0)`
             : undefined,

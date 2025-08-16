@@ -2,8 +2,7 @@ import { useState } from "react";
 import DraggableWindow from "./components/DraggableWindow";
 import { DndContext } from "@dnd-kit/core";
 import { restrictToWindowEdges } from "@dnd-kit/modifiers";
-import Window from "./components/Window";
-import DotGrid from "./components/DotGrid";
+import Squares from "./components/Squares";
 
 function App() {
     const [windows, setWindows] = useState([]);
@@ -43,21 +42,17 @@ function App() {
             onDragEnd={handleDragEnd}
             modifiers={[restrictToWindowEdges]}
         >
-            <div className="h-screen w-screen relative overflow-hidden flex items-center justify-center">
-                {/* Dot grid background */}
-                <DotGrid
-                    dotSize={7}           // Size of each dot (customizable: 4-20 work well)
-                    gap={20}               // Space between dots (customizable: 10-30)
-                    baseColor="#5227FF"    // Default dot color (customizable: any hex color)
-                    activeColor="#8B5FFF"  // Color when cursor is near (customizable: any hex color)
-                    proximity={150}        // Distance for hover effects (customizable: 80-200)
-                    shockRadius={300}      // Click effect radius (customizable: 150-400)
-                    shockStrength={5}      // Strength of click push (customizable: 2-10)
-                    resistance={750}       // How fast dots return (customizable: 500-1000)
-                    returnDuration={1.5}   // Time to return to position (customizable: 1-3 seconds)
+            <div className="h-screen w-screen relative overflow-hidden flex items-center justify-center bg-cyan-950">
+                {/* Animated squares background */}
+                <Squares 
+                    speed={0.125}                    
+                    squareSize={100}                
+                    direction="diagonal"           
+                    borderColor="#271e37"             
+                    hoverFillColor="#222222"          
                 />
                 {/* Main "Desktop" Window */}
-                <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1 max-w-lg">
+                <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1 max-w-lg relative z-10">
                     {/* Title bar */}
                     <div className="flex justify-between items-center bg-blue-500 text-white px-2 py-1">
                         <span className="font-bold flex-1">
