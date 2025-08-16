@@ -13,12 +13,12 @@ function App() {
             prevWindows.map((win) =>
                 win.id === active.id
                     ? {
-                          ...win,
-                          position: {
-                              x: win.position.x + delta.x,
-                              y: win.position.y + delta.y,
-                          },
-                      }
+                        ...win,
+                        position: {
+                            x: win.position.x + delta.x,
+                            y: win.position.y + delta.y,
+                        },
+                    }
                     : win
             )
         );
@@ -26,9 +26,13 @@ function App() {
 
     const openWindow = (windowId, title) => {
         if (!windows.find((win) => win.id === windowId)) {
+            const winWidth = 400; 
+            const winHeight = 300; 
+            const x = Math.max(0, (window.innerWidth - winWidth) / 2);
+            const y = Math.max(0, (window.innerHeight - winHeight) / 2);
             setWindows([
                 ...windows,
-                { id: windowId, title: title, position: { x: 700, y: 400 } },
+                { id: windowId, title: title, position: { x, y } },
             ]);
         }
     };
