@@ -60,21 +60,21 @@ function App() {
                     hoverFillColor="#6b9080"
                 />
                 {/* Main "Desktop" Window */}
-                <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1 max-w-2xl relative z-10">
+                <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1 min-w-xl max-w-2xl relative z-10">
                     {/* Title bar */}
                     <div className="flex justify-between items-center bg-[#6b9080] text-white px-2 py-1">
                         <span className="font-bold flex-1">Home</span>
                     </div>
                     {/* Window content */}
-                    <div className="p-4 bg-[#f6fff8]">
-                        <h1 className="text-2xl font-bold">
+                    <div className="p-4 bg-[#f6fff8] min-h-[400px] flex flex-col justify-center items-center">
+                        <h1 className="text-4xl font-bold mb-2">
                             Hi! I'm Alex Cottam 👋
                         </h1>
-                        <p className="text-sm">📍 Salt Lake City, UT</p>
-                        <p className="text-sm mb-4">
+                        <p className="text-lg">📍 Salt Lake City, UT</p>
+                        <p className="text-lg mb-10">
                             🖥️ iOS and Frontend Developer
                         </p>
-                        <div className="space-x-4">
+                        <div className="space-x-4 flex justify-center">
                             <button
                                 className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md"
                                 onClick={() =>
