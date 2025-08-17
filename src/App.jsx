@@ -126,13 +126,13 @@ function App() {
                             >
                                 <FaLinkedin className="inline-block mx-4 text-2xl text-gray-700 hover:text-gray-900" />
                             </a>
-                            <a
-                                href="https://www.linkedin.com/in/alex-jinoo-cottam/"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <button
+                                onClick={() => {
+                                    alert("Website Audio Coming Soon!");
+                                }}
                             >
                                 <FaVolumeUp className="inline-block mx-4 text-2xl text-gray-700 hover:text-gray-900" />
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
