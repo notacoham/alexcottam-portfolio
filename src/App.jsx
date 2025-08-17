@@ -61,23 +61,23 @@ function App() {
                     hoverFillColor="#6b9080"
                 />
                 {/* Main "Desktop" Window */}
-                <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1 min-w-xl max-w-2xl relative z-10 rounded-lg drop-shadow-lg">
+                <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl mx-4 sm:mx-6 md:mx-8 relative z-10 rounded-lg drop-shadow-lg">
                     {/* Title bar */}
                     <div className="flex justify-between items-center bg-[#6b9080] text-white px-2 py-1 rounded-t-md">
                         <span className="font-bold flex-1">Home</span>
                     </div>
                     {/* Window content */}
-                    <div className="p-4 bg-[#f6fff8] min-h-[400px] flex flex-col justify-center items-center">
-                        <h1 className="text-4xl font-bold mb-2">
+                    <div className="p-3 sm:p-4 bg-[#f6fff8] min-h-[300px] sm:min-h-[400px] flex flex-col justify-center items-center">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-center">
                             Hi! I'm Alex Cottam 👋
                         </h1>
-                        <p className="text-lg">📍 Salt Lake City, UT</p>
-                        <p className="text-lg mb-10">
+                        <p className="text-base sm:text-lg text-center">📍 Salt Lake City, UT</p>
+                        <p className="text-base sm:text-lg mb-6 sm:mb-10 text-center">
                             🖥️ iOS and Frontend Developer
                         </p>
-                        <div className="space-x-4 flex justify-center">
+                        <div className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center items-center">
                             <button
-                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md rounded-md"
+                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 sm:p-2 border-2 border-solid border-gray-300 shadow-md rounded-md w-full sm:w-auto min-h-[44px] flex items-center justify-center"
                                 onClick={() =>
                                     openWindow("about-me", "About Me")
                                 }
@@ -86,7 +86,7 @@ function App() {
                                 About
                             </button>
                             <button
-                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md rounded-md"
+                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 sm:p-2 border-2 border-solid border-gray-300 shadow-md rounded-md w-full sm:w-auto min-h-[44px] flex items-center justify-center"
                                 onClick={() =>
                                     openWindow("experience", "Experience")
                                 }
@@ -95,7 +95,7 @@ function App() {
                                 Experience
                             </button>
                             <button
-                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md rounded-md"
+                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 sm:p-2 border-2 border-solid border-gray-300 shadow-md rounded-md w-full sm:w-auto min-h-[44px] flex items-center justify-center"
                                 onClick={() =>
                                     openWindow("projects", "Projects")
                                 }
@@ -104,7 +104,7 @@ function App() {
                                 Projects
                             </button>
                             <button
-                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 border-2 border-solid border-gray-300 shadow-md rounded-md"
+                                className="bg-[#eaf4f4] hover:bg-[#A4C3B2] p-2 sm:p-2 border-2 border-solid border-gray-300 shadow-md rounded-md w-full sm:w-auto min-h-[44px] flex items-center justify-center"
                                 onClick={() => openWindow("contact", "Contact")}
                             >
                                 <FaMailBulk className="inline-block mr-2" />

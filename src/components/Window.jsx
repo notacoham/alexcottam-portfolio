@@ -12,7 +12,7 @@ const Window = ({
     };
 
     return (
-        <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1 rounded-lg drop-shadow-lg relative z-10 max-w-2xl min-w-xl max-h-[500px] overflow-scroll scrollbar-hide">
+        <div className="bg-gray-200 border-2 border-solid border-gray-400 shadow-md p-1 rounded-lg drop-shadow-lg relative z-10 w-[90vw] max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[70vh] sm:max-h-[500px] overflow-scroll scrollbar-hide">
             <div className="flex justify-between items-center bg-[#6b9080] text-white px-2 py-1 rounded-t-md">
                 <span
                     ref={handleRef}
@@ -29,7 +29,7 @@ const Window = ({
                     X
                 </button>
             </div>
-            <div className="p-4 bg-[#f6fff8]">{children}</div>
+            <div className="p-3 sm:p-4 bg-[#f6fff8]">{children}</div>
         </div>
     );
 };

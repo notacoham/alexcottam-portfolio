@@ -3,14 +3,14 @@ import profileImg from '../assets/profile-img.png';
 const AboutMe = () => {
     return (
         <div className="p-4">
-            <div className="flex">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start">
                 <img
                     src={profileImg}
                     alt="profile image"
-                    className="w-30 h-30 rounded-full hover:scale-110 transition-transform duration-200"
+                    className="w-30 h-30 rounded-full hover:scale-110 transition-transform duration-200 mb-4 sm:mb-0 flex-shrink-0"
                 />
-                <div className="ml-6">
-                    <h1 className="font-bold text-3xl mb-2">Alex Cottam</h1>
+                <div className="sm:ml-6 text-center sm:text-left">
+                    <h1 className="font-bold text-2xl sm:text-3xl mb-2">Alex Cottam</h1>
                     <p className="text-lg">
                         iOS Developer @{" "}
                         <a className="text-amber-400 underline" target='_blank' href="https://www.amanocare.com/">
