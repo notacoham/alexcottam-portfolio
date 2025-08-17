@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap');
 @import "tailwindcss";
+@import "tailwind-scrollbar-hide/v4";
 
 @theme {
     --font-mozilla: "Mozilla Text", sans-serif;

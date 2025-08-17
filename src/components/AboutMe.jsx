@@ -18,7 +18,7 @@ const AboutMe = () => {
                         </a>
                     </p>
                     <p className="text-lg">
-                        Web Dev Instructor @{" "} <a className="text-amber-400 underline" target='_blank' href="https://slcc.edu">SLCC</a>
+                        Web Development Instructor @{" "} <a className="text-amber-400 underline" target='_blank' href="https://slcc.edu">SLCC</a>
                     </p>
                 </div>
             </div>
