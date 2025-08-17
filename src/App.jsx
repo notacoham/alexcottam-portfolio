@@ -7,7 +7,7 @@ import AboutMe from "./components/AboutMe";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import { FaInfo, FaFolder, FaTools, FaMailBulk } from "react-icons/fa";
+import { FaInfo, FaFolder, FaTools, FaMailBulk, FaGithub, FaLinkedin, FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 
 function App() {
     const [windows, setWindows] = useState([]);
@@ -111,6 +111,29 @@ function App() {
                                 Contact
                             </button>
                         </div>
+                        <div className="mt-6 align-bottom">
+                            <a
+                                href="https://github.com/notacoham"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaGithub className="inline-block mx-4 text-2xl text-gray-700 hover:text-gray-900" />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/alex-jinoo-cottam/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaLinkedin className="inline-block mx-4 text-2xl text-gray-700 hover:text-gray-900" />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/alex-jinoo-cottam/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaVolumeUp className="inline-block mx-4 text-2xl text-gray-700 hover:text-gray-900" />
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -122,18 +145,10 @@ function App() {
                         onClose={() => closeWindow(win.id)}
                         initialPosition={win.position}
                     >
-                        {win.id === "about-me" && (
-                            <AboutMe />
-                        )}
-                        {win.id === "experience" && (
-                            <Experience />
-                        )}
-                        {win.id === "projects" && (
-                            <Projects />
-                        )}
-                        {win.id === "contact" && (
-                            <Contact />
-                        )}
+                        {win.id === "about-me" && <AboutMe />}
+                        {win.id === "experience" && <Experience />}
+                        {win.id === "projects" && <Projects />}
+                        {win.id === "contact" && <Contact />}
                     </DraggableWindow>
                 ))}
             </div>
