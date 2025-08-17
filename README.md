@@ -1,12 +1,50 @@
-# React + Vite
+# Alex Cottam - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive portfolio website featuring a unique desktop-style interface with draggable and resizable windows. Built with React and showcasing my experience as an iOS and Frontend Developer.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Desktop-Style Interface**: Unique window-based navigation system that mimics a desktop environment
+- **Draggable & Resizable Windows**: Interactive windows that can be moved for a dynamic user experience
+- **Responsive Design**: Fully responsive layout that works across all device sizes
+- **Animated Background**: Engaging animated squares background with hover effects
+- **Modern UI/UX**: Clean, professional design with smooth animations and transitions
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React 19.1.1
+- **Build Tool**: Vite 7.1.2
+- **Styling**: Tailwind CSS 4.1.12
+- **Drag & Drop**: @dnd-kit/core for window management
+- **Animations**: GSAP and React Bits for smooth animations and background
+- **Icons**: React Icons
+- **Linting**: ESLint with React-specific rules
+
+## 📱 Portfolio Sections
+
+- **About Me**: Personal introduction and background
+- **Experience**: Professional experience and technical skills
+- **Projects**: Showcase of development projects and achievements
+- **Contact**: Contact information and ways to connect
+
+## 🎯 Key Highlights
+
+- **Innovative UX**: Desktop-style interface sets this portfolio apart from traditional single-page designs
+- **Technical Proficiency**: Demonstrates advanced React concepts including state management, custom hooks, and component composition
+- **Performance Optimized**: Built with Vite for fast development and optimized production builds
+- **Accessibility**: Responsive design ensuring accessibility across devices
+- **Modern Development Practices**: ESLint configuration, clean code structure, and component-based architecture
+
+## 🔗 Connect With Me
+
+- **GitHub**: [notacoham](https://github.com/notacoham)
+- **LinkedIn**: [alex-jinoo-cottam](https://www.linkedin.com/in/alex-jinoo-cottam/)
+- **Location**: Salt Lake City, UT
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+*Built with ❤️ by Alex Cottam - iOS and Frontend Developer*
