@@ -4,10 +4,12 @@ import { useRef } from "react";
 
 const DraggableWindow = ({ id, title, children, initialPosition, onClose }) => {
     const handleRef = useRef(null);
+    const isMobile = window.innerWidth < 768;
 
     const { attributes, listeners, setNodeRef, transform, isDragging } =
         useDraggable({
             id: id,
+            disabled: isMobile,
         });
 
     const style = {
