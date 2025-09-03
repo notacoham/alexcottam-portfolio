@@ -1,3 +1,5 @@
+import { useSound } from '../hooks/useSound';
+
 const Window = ({
     title,
     children,
@@ -6,9 +8,18 @@ const Window = ({
     attributes,
     listeners,
 }) => {
+    // Example sound integration - replace with actual sound file paths
+    const { play: playClose } = useSound('/src/assets/sounds/ui/window-close.wav', { volume: 0.3 });
+    const { play: playClick } = useSound('/src/assets/sounds/ui/click.wav', { volume: 0.2 });
+
     const handleCloseClick = (event) => {
         event.stopPropagation();
+        playClose(); // Play sound on window close
         onClose();
+    };
+
+    const handleTitleClick = () => {
+        playClick(); // Play sound on title bar click
     };
 
     return (
@@ -17,6 +28,7 @@ const Window = ({
                 <span
                     ref={handleRef}
                     className="font-bold cursor-move flex-1"
+                    onClick={handleTitleClick}
                     {...listeners}
                     {...attributes}
                 >
